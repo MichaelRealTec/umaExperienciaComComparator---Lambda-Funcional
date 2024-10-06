@@ -17,7 +17,7 @@ public class Program {
 		list.add(new Product("Notebook", 1200.00));
 		list.add(new Product("Tablet", 450.00));
 		
-		Comparator<Product> comp = (p1, p2) -> p1.getName().toUpperCase().compareTo(p2.getName().toUpperCase());
+		//Comparator<Product> comp = (p1, p2) -> p1.getName().toUpperCase().compareTo(p2.getName().toUpperCase());
 				
 				
 				/*new Comparator<Product>() {
@@ -30,7 +30,7 @@ public class Program {
 		};
 		*/
 		
-		list.sort(comp);
+		list.sort((p1, p2) -> p1.getName().toUpperCase().compareTo(p2.getName().toUpperCase()));
 		
 		// Collections.sort(list); // Tem que ser o comparable para usar o sort
 		// list.sort(new MyComparator());
